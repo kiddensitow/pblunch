@@ -110,6 +110,16 @@ You will get the Add New Page screen.
 Create a new Page named _Menu Items_, Choose _List Menu_ as template, 
 then click on **Publish** button.
 
+# Oder
+## Order Editor
+Just in index.php
+
+## Order List
+
+In the dashboard, hover on Pages and click on **Add New** tab. 
+You will get the Add New Page screen. 
+Create a new Page named _Orders_, Choose _List Order_ as template, 
+then click on **Publish** button.
 
 Name:, restaurant name, string, union
 Price: item price, double.

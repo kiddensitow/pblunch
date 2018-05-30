@@ -10,7 +10,7 @@ $is_new = false;
 // It is GET method.
 if ('GET' == $_SERVER['REQUEST_METHOD']) {
     if (isset($_GET['order_date'])) {
-        $order_date = $_GET['order_data'];
+        $order_date = $_GET['order_date'];
     } else {
         $order_date = date("Y-m-d");
     }
@@ -80,6 +80,8 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
 }
 
 // Find order from database
+echo "<br />Order SQL: " . $wpdb->prepare(
+    "SELECT * FROM orders WHERE uid = %d AND order_date = %s", $uer_id, $order_date);
 $order = $wpdb->get_row($wpdb->prepare(
     "SELECT * FROM orders WHERE uid = %d AND order_date = %s", $uer_id, $order_date));
 if ($order == NULL) {
