@@ -40,6 +40,16 @@ Active the PBLunch theme
 2. You should see the newly created _pbLunch_.
 3. Click on Activate button of _pbLunch_ to activate the theme.
 
+# Restaurant
+
+## Restaurant information
+
+In the dashboard, hover on Pages and click on Add New tab. You will get the Add New Page screen. 
+Create a new Page named Add new, Choose Furniture Creation (new.php) as template, then click on Publish button.
+
+
+## Restaurant List
+
 # Create Menu item
 In the dashboard click on the CPT UI plugin button.
 You will get the Add/Edit Post Types page.

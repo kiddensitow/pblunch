@@ -40,6 +40,7 @@
                     ?>
                 </h4>
                 <a href="/wordpress/restaurants?action=delete&id=<?php echo $restaurant->id ?>">delete</a>
+                <a href="/wordpress/restaurant?id=<?php echo $restaurant->id ?>">Edit</a>
             </li>
             <?php
 				}
