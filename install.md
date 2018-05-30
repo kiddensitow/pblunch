@@ -28,6 +28,45 @@
         PRIMARY KEY (`id`)
     ) ENGINE = MyISAM CHARSET=utf8 COLLATE utf8_general_ci;
 
+## order 
+
+    CREATE TABLE `orders` (
+        `id` int(11) NOT NULL,
+        `uid` int(11) NOT NULL,
+        `items` varchar(1024) NOT NULL DEFAULT '{}' COMMENT 'Key: menu id, value price',
+        `price` int(11) NOT NULL DEFAULT '0',
+        `order_date` date NOT NULL,
+        `due_date` datetime NOT NULL
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+    --
+    -- Indexes for dumped tables
+    --
+
+    --
+    -- Indexes for table `orders`
+    --
+    ALTER TABLE `orders`
+    ADD PRIMARY KEY (`id`),
+    ADD UNIQUE KEY `uid` (`uid`,`due_date`);
+
+    --
+    -- AUTO_INCREMENT for dumped tables
+    --
+
+    --
+    -- AUTO_INCREMENT for table `orders`
+    --
+    ALTER TABLE `orders`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    COMMIT;
+
+## system setting
+
+    CREATE TABLE `pb_setting` ( 
+        `due_time` TIME NOT NULL DEFAULT '11:00' , 
+        `overdraft` FLOAT NOT NULL DEFAULT '10.00' 
+    ) ENGINE = MyISAM;
 
 # Download PBLunch theme
 

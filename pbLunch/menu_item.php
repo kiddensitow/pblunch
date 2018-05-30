@@ -141,7 +141,7 @@ if ('GET' == $_SERVER['REQUEST_METHOD'] && !empty( $_GET['id'])) {
 <!--SUBMIT POST END-->
 
 <?php } else { ?>
-<a href="<?php echo wp_login_url(get_permalink()); ?>">Please login to add a new furniture.</a>
+<a href="<?php echo wp_login_url(get_permalink()); ?>">Please login to add a new menu item.</a>
 <?php } ?></li>
 </div><!-- .content -->
 </div><!-- #container -->
