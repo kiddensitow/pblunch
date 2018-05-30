@@ -49,7 +49,6 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
     }
 
     if ($res_id != 0) {
-        echo "update" . $res_id;
         $result = $wpdb->update( 
             'restaurants', 
             array( 
@@ -70,7 +69,6 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
             array('%d') 
         );
     } else {
-        echo "insert";
         $result = $wpdb->insert(
             "restaurants",
             array(
@@ -91,7 +89,6 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
     }
 
     if ($result) {
-        echo "Add restaurant successfully";
         $id = $wpdb->insert_id;
        // wp_redirect( get_permalink( $post_id ).'?success=yes' );
     } else {
@@ -112,7 +109,7 @@ if ('GET' == $_SERVER['REQUEST_METHOD'] && !empty( $_GET['id'])) {
 <div id="container">
 <div id="content" role="main">
 <?php if (is_user_logged_in()) { ?>
-
+    <a href="/wordpress/menu-items?res_id=<?php echo $item->id ?>">Add Menu</a>
     <!--SUBMIT POST-->
     <form id="new_post" name="new_post" class="post_work" method="post" enctype="multipart/form-data">
         <?php if ($item->id == 0) { ?>

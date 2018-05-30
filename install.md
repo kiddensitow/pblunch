@@ -44,31 +44,33 @@ Active the PBLunch theme
 
 ## Restaurant information
 
-In the dashboard, hover on Pages and click on Add New tab. You will get the Add New Page screen. 
-Create a new Page named Add new, Choose Furniture Creation (new.php) as template, then click on Publish button.
-
+In the dashboard, hover on Pages and click on **Add New** tab. 
+You will get the Add New Page screen. 
+Create a new Page named _Restaurant_, Choose _Restaurant Editor_ as template, 
+then click on **Publish** button.
 
 ## Restaurant List
 
-# Create Menu item
-In the dashboard click on the CPT UI plugin button.
-You will get the Add/Edit Post Types page.
+In the dashboard, hover on Pages and click on **Add New** tab. 
+You will get the Add New Page screen. 
+Create a new Page named _Restaurant_, Choose _Restaurant Editor_ as template, 
+then click on **Publish** button.
 
-1. Input **Post Type Slug** as _menu_.
-2. Input **Plural Label** as _menus_.
-3. Input **Singular Label** as _menu_.
-4. Set **Has Archive** as _True_.
-5. In **support** field, uncheck the _Editor_ and _Featured Image boxes_, check the _comments_.
-6. Click on the **Add Post Type** button
+# Menu
 
-# Creat Menu field
-Add menu fields for menu.
+## Menu Editor
+In the dashboard, hover on Pages and click on **Add New** tab. 
+You will get the Add New Page screen. 
+Create a new Page named _Menu Item_, Choose _Menu Item Editor_ as template, 
+then click on **Publish** button.
 
-1. Hover on **Custom Fields** and click on **Custom Fields** tab.
-2. Click on **Add New** button.
-3. Type in _menu fields_ in the **Add New Field Group** as the group name 
-4. Click on **Add Field** button.
-5. 
+## Menu List
+
+In the dashboard, hover on Pages and click on **Add New** tab. 
+You will get the Add New Page screen. 
+Create a new Page named _Menu Items_, Choose _List Menu_ as template, 
+then click on **Publish** button.
+
 
 Name:, restaurant name, string, union
 Price: item price, double.
