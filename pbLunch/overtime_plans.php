@@ -26,15 +26,23 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
         exit;
     }
 
+    // check plan price
+    if (!isset($_POST['ot_price'])) { 
+        echo '<br /> No Overtime price';
+        exit;
+    }
+
     $result = $wpdb->insert(
         "ot_plans",
         array(
             "rid" => $res_id,
             "ot_date" => $ot_date,
+            "price" => $_POST['ot_price'],
         ),
         array(
             '%d',
-            '%s'   
+            '%s',
+            "%f",
         )
     );
 
@@ -66,6 +74,11 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
             <p><label for="title">Date:</label><br />
                 <input type="text" id="title" class="required" 
                     value="" tabindex="1" size="20" name="ot_date" required />
+            </p>
+
+            <p><label for="title">price:</label><br />
+                <input type="text" id="title" class="required" 
+                    value="" tabindex="1" size="20" name="ot_price" required />
             </p>
 
             <p><label for="weekday">restaurants:</label><br />
