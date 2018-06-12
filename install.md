@@ -212,6 +212,40 @@
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
     COMMIT;
 
+##
+ --
+ -- Table structure for table `top_up_record`
+ --
+ 
+     CREATE TABLE `top_up_record` (
+        `id` int(11) NOT NULL,
+        `user_id` int(11) NOT NULL,
+        `amount` double NOT NULL,
+        `date` datetime NOT NULL,
+        `status` int(11) NOT NULL,
+        'approved_by' int(11) NOT NULL
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+    --
+    -- Indexes for dumped tables
+    --
+
+    --
+    -- Indexes for table `top_up_record`
+    --
+    ALTER TABLE `top_up_record`
+    ADD PRIMARY KEY (`id`);
+
+    --
+    -- AUTO_INCREMENT for dumped tables
+    --
+
+    --
+    -- AUTO_INCREMENT for table `top_up_record`
+    --
+    ALTER TABLE `top_up_record`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    COMMIT;
 
 # Download PBLunch theme
 
@@ -279,3 +313,21 @@ Price: item price, double.
 Picture: url of picture, string, 
 Introduction: string.
 Delete: the item is delete, bool, true is deleted
+
+## Navigation bar set up
+
+In the functions.php file, paste the below code to it. If such file does not, create one in the root folder, then copy the code to it with the php tab.
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'PBLunch Menu' ),
+) );
+
+Files required for the menu.
+pb-logo2.gif
+pb-home-header.jpg
+class-wp-bootstrap-navwalder.php (save it into inc folder)
+
+Go to the Menus page under Appearance in the WordPress dashboard, press to create a new menu. Type in the name of the new Menu, in this case PBLunch Menu, then press Create Menu. Click the desired pages from the Pages panel and click the Add to Menu botton to add those pages to the menu bar. On Menu Structure, arrange the order of the pages then check Primary Menu under Menu Settings. After saving the settings, go to Manage Location then choose the new created menu to be the Primary Menu. Lastly, go to Reading under Settings in Dashboard. Check static page then chose a desired page of the website to be Homepage. 
